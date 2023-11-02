@@ -12,7 +12,7 @@ function App() {
     var loadedNotes = localStorage.getItem("notes").split("<note>") 
     
     loadedNotes = loadedNotes.filter(item => { // Filtra notas vacias
-      return (item != "" || item != undefined || item != null)
+      return (item != "" && item != undefined && item != null)
     })
 
     loadedNotes = loadedNotes.map(item => {
